@@ -1,0 +1,18 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Principal": {
+        "AWS": "*"
+      },
+      "Action": ["es:*"],
+      "Condition": {
+        "IpAddress": {
+          "aws:SourceIp": ["173.54.172.109"]
+        }
+      },
+      "Resource": "arn:aws:es:us-east-1:289826766026:domain/foodception/*"
+    }
+  ]
+}
